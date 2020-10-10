@@ -1,0 +1,20 @@
+// 媒体查询 max-width
+$mediaScreenMaxWidthOnlyNumber: 750;
+$mediaScreenMaxWidth: $mediaScreenMaxWidthOnlyNumber + px;
+// 设计图宽度
+$baseWidth: 750;
+// $baseWidth/$baseSize 750/75 --- 10rem
+$baseSize: 75;
+// pc端baseSize
+$pcBaseSize: 16;
+
+@function px2rem($px) {
+    @return 1 / $baseSize * $px * 1rem;
+}
+
+:export {
+    mediaScreenMaxWidth: $mediaScreenMaxWidthOnlyNumber;
+    baseSize: $baseSize;
+    baseWidth: $baseWidth;
+    pcBaseSize: $pcBaseSize;
+}
